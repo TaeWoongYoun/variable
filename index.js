@@ -67,10 +67,22 @@ const 출신지역 = '충청남도 천안시 서북구 두정동';
 // 하단에 자바스크립트 작성하면 됩니다.
 // (위 문제의 답은 1335입니다)
 
-var True = 1335;
+// var True = 1335;
 
-if(True == 1335){
-    alert('성공');
-} else {
-    alert('실패');
-}
+// if(True == 1335){
+//     alert('성공');
+// } else {
+//     alert('실패');
+// }
+
+var count = 0;
+
+document.querySelector('#send-answer').addEventListener('click', function(){
+    count += 1;
+    var 유저답안 = document.querySelector('#answer').value;
+    if (유저답안 == '1335') {
+        alert('성공')
+    } else if (count >= 3 && 유저답안 != '1335'){
+        alert('멍청아')
+    }
+});
