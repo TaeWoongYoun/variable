@@ -77,12 +77,12 @@ const 출신지역 = '충청남도 천안시 서북구 두정동';
 
 var count = 0;
 
-document.querySelector('#send-answer').addEventListener('click', function(){
+$('#send-answer').on('click', function(){
     count += 1;
-    var 유저답안 = document.querySelector('#answer').value;
+    var 유저답안 = $('#answer').val();
     if (유저답안 == '1335') {
-        alert('성공')
+        alert('성공');
     } else if (count >= 3 && 유저답안 != '1335'){
-        alert('멍청아')
+        alert('멍청아');
     }
 });
